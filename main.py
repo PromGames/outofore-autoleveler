@@ -7,7 +7,7 @@ import ctypes
 
 # --- APP INFO ---
 VERSION = "1.01"
-GITHUB_URL = "https://github.com/Bableg/OutOfOre-AutoLeveler"
+GITHUB_URL = "https://github.com/bableg/OutOfOre-AutoLeveler"
 
 # --- CONFIGURATION ---
 PROCESS_NAME = "OutOfOre-Win64-Shipping.exe"
