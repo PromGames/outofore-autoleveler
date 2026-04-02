@@ -9,8 +9,8 @@ This is an external automation tool that provides advanced blade stabilization a
 
 ### ⚠️ Critical Requirements & Warnings
 * **GPS Receiver Module:** Your vehicle **MUST** have a GPS Receiver installed.
-* **Single Player Only:** Designed strictly for Single Player sessions.
-* **Session Bug:** If you join a Multiplayer server, memory addresses will conflict. **Restart the game** and enter Single Player directly.
+* ~~**Single Player Only:** Designed strictly for Single Player sessions.~~
+* ~~**Session Bug:** If you join a Multiplayer server, memory addresses will conflict. **Restart the game** and enter Single Player directly.~~
 * **Tested Vehicles:** Chariton DX11000 (Dozer) and Chariton g200E (Grader).
 
 ---
