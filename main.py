@@ -81,7 +81,7 @@ class AutoPilot:
 overlay = Overlay('Notepad++', 0.0001)
 
 while True:
-    def draw_ui(self, cur_s, cur_p, cur_g):
+    def overlay.draw_ui(self, cur_s, cur_p, cur_g):
         mode = self.mode_list[self.mode_idx]
         print("\033[H", end="")
         print("="*55)
