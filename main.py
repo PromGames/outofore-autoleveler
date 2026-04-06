@@ -1,3 +1,16 @@
+from externalpyoverlay import Overlay
+from random import randint
+
+
+    overlay.draw_circle(300, 300, 40, (14, 24, 184), 2)
+    overlay.draw_circle(300, 300, 25, (0, 255, 0), 0)
+    overlay.draw_ellipse(500, 500, 60, 20, (128, 128, 0), 8)
+    overlay.draw_line(400, 380, 600, 420, (0, 107, 174), 2)
+    overlay.draw_rect(200, 400, 30, 30, (199, 21, 133), 0)
+    overlay.draw_rect(180, 380, 80, 120, (0, 255, 255), 1)
+    overlay.draw_text('Overlay testing', ('Impact', 45), 350, 300, (randint(0, 255), randint(0, 255), randint(0, 255)), False)
+   
+
 import pymem
 import pymem.process
 import keyboard
@@ -74,7 +87,9 @@ class AutoPilot:
             return final_addr
         except:
             return None 
+overlay = Overlay('Notepad++', 0.0001)
 
+while True:
     def draw_ui(self, cur_s, cur_p, cur_g):
         mode = self.mode_list[self.mode_idx]
         print("\033[H", end="")
@@ -104,7 +119,7 @@ class AutoPilot:
         print("="*55)
         if not self.is_connected:
             print("\n [!] CONNECTION LOST. RECONNECTING...")
-
+ overlay.update_overlay()
     def run(self):
         # Verify process status
         try:
@@ -159,7 +174,7 @@ class AutoPilot:
                     if keyboard.is_pressed('f7'): self.target_side -= 0.05; time.sleep(0.1)
                     if keyboard.is_pressed('f8'): self.target_side += 0.05; time.sleep(0.1)
 
-            if keyboard.is_pressed('5'):
+            if keyboard.is_pressed('num5'):
                 if cur_mode == "GPS_LEVEL": self.target_gps = round(cur_g, -1)
                 elif cur_mode in ["FULL_AUTO", "SEMI_AUTO"]:
                     self.target_side = 0.0
